@@ -50,6 +50,7 @@ public class GraWisielec {
 
         System.out.println("Odgadnij wylosowane słowo podając litery, które uważasz, że słowo może zawierać. " +
                 "Każda nietrafiona litera buduje szubienicę. ");
+        //scan.nextLine();
         // jak kontynuować dopiero po wciśnięciu entera? - jak zeskjanować sam enter?
     }
     public static String randomWord() {
@@ -77,17 +78,16 @@ public class GraWisielec {
             }
             // jak nie iterować za każdym razem od początku w celu wywietlania - tablica, druga wersja
         }
-        System.out.println("Szukane słowo: " + matrix);
         if (!matrix.contains("-")) {
             System.out.println("Zgadłeś słowo");
             end = true;
         }
-
+        System.out.println("Szukane słowo: " + matrix);
     }
     public static String takeLetter() {
 
         char charLetter;
-        String tmpLetter = null;
+        String tmpLetter = "";
         //za każdym razem kiedy będzie pobierał literę będzie tworzył tą zmienną, czy nie lepiej stworzyć pole statyczne?
         boolean isNew = false;
         do {
@@ -109,7 +109,8 @@ public class GraWisielec {
     }
     public static void checkLetterInWord(String letter, String word) {
         // gdy wpiszemy zmienną do parametrów to przysłania ona pole statyczne o tej samej nazwie
-
+        System.out.println(letter);
+        System.out.println(word);
         if (word.contains(letter)) {
             gotLetters += letter;
             System.out.println("Trafiłeś literę");

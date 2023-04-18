@@ -38,7 +38,7 @@ public class Metody3Hard {
                 arr[arr.length - 1] = i;
                 arrTmp = new int[index];
             }
-           // arr = Arrays.copyOf(arr, arr.length + 1);
+            arr = Arrays.copyOf(arr, arr.length + 1);
         }
         return arr;
     }

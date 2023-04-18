@@ -46,7 +46,7 @@ public class Rzutowanie {
         // gdy przekroczy 5 mld, zakres wartości dla integer
 
         intByte(1000);
-        int x = 1000;
+        int x = 999;
         short y = 20_000;
         System.out.println((float) x);
         System.out.println((byte) x);

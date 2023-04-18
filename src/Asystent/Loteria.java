@@ -5,7 +5,7 @@ package Asystent;
         import java.util.Scanner;
 
 public class Loteria {
-    static int howManyNumbers = 6;
+  private   static int howManyNumbers = 6;
 
     /*
         Symulator loterii liczbowej:
@@ -19,12 +19,11 @@ public class Loteria {
         Użyj każdego z poznanych narzędzi: zmienna, operatory, warunek, tablice, Scanner, Random, Pętle..
         wariant trudniejszy: Liczby wprowadzane ani liczby losowane nie mogą się  powtarzać.
         */
-    public static void main(String[] args) {
-
+   static void uruchomLoterie(){
         dajNagrode(wylosujLiczby(), pobierzLiczby());
     }
 
-    public static int[] wylosujLiczby() {
+    private static int[] wylosujLiczby() {
 
         Scanner scan = new Scanner(System.in);
         Random ran = new Random();
@@ -51,7 +50,7 @@ public class Loteria {
         return randomNumbers;
     }
 
-    public static int[] pobierzLiczby() {
+    private static int[] pobierzLiczby() {
 
         int[] userNumbers = new int[howManyNumbers];
         Scanner scan = new Scanner(System.in);
@@ -82,7 +81,7 @@ public class Loteria {
         // czy pętla w pętli może mieć taką sama nazwę licznika?
     }
 
-    public static void dajNagrode(int[] randomNumbers, int[] userNumbers) {
+    private static void dajNagrode(int[] randomNumbers, int[] userNumbers) {
 
         int count = 0;
         for (int randomNumber : randomNumbers) {
